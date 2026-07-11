@@ -1,5 +1,8 @@
 # Momentum Nexus
 
+# Momentum Nexus
+
+A multi-agent AI IT support ticket triage system powered by FastAPI, OpenAI, LangSmith, and MongoDB.
 An IT support ticket triage backend. A user submits a ticket describing an
 issue, the affected system, and its impact; a three-agent pipeline classifies
 it, plans troubleshooting steps, and drafts a customer-facing resolution
@@ -24,13 +27,38 @@ Each agent is an OpenAI (`gpt-4o`) call orchestrated in sequence by
 `agents/orchestrator.py`, traced with LangSmith. Tickets and their pipeline
 results are persisted to MongoDB.
 
-## Stack
+## Features
+
+- Multi-agent AI workflow
+- Ticket classification
+- Troubleshooting plan generation
+- Customer-facing resolution drafting
+- LangSmith tracing
+- MongoDB persistence
+- FastAPI REST API
+- Automated testing with pytest
+
+## Tech Stack
+
+Backend
 
 - FastAPI
-- OpenAI API (`gpt-4o`)
-- MongoDB (via Motor)
-- LangSmith (tracing)
-- pytest / pytest-asyncio
+- Python
+
+AI
+
+- OpenAI GPT-4o
+- LangSmith
+
+Database
+
+- MongoDB
+- Motor
+
+Testing
+
+- pytest
+- pytest-asyncio
 
 ## Project layout
 
